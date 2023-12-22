@@ -1,4 +1,5 @@
-N=int(input())
+import sys
+N=int(sys.stdin.readline())
 ans=0
 #1부터 N까지 다 확인할거야
 for i in range(N):
