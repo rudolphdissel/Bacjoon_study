@@ -1,14 +1,15 @@
+#2231 분해합
+
+#입력받기
 import sys
 N=int(sys.stdin.readline())
 ans=0
 #1부터 N까지 다 확인할거야
 for i in range(N):
-    m=str(i)
+    m=[int(x) for x in str(i)]
     if ans!=0:
         break
-    bubunsum=0
-    for j in range(len(m)):
-        bubunsum+=int(m[j])
+    bubunsum=sum(m)
     bunsum=bubunsum+i
     if bunsum==N:
         ans=i
