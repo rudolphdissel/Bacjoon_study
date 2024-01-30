@@ -1,11 +1,10 @@
+import sys
 munza=[]
-new=[]
-N=int(input())
+N=int(sys.stdin.readline())
 for i in range(N):
-    munza.append(input())
+    munza.append(sys.stdin.readline().strip())
 munza=list(set(munza))
+munza.sort()
+munza.sort(key=len)
 for i in munza:
-    new.append((len(i),i))
-new.sort()
-for i in new:
-    print(i[1])
+    print(i)
